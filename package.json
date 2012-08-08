@@ -1,0 +1,14 @@
+{
+  "name": "popup",
+  "description": "Create a browser popup window",
+  "version": "0.0.1",
+  "bundledDependencies": ["core"],
+  "dependencies": {
+    "emitter-component": "*"
+  },
+  "component": {
+    "scripts": {
+      "popup": "popup.js"
+    }
+  }
+}
