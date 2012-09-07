@@ -57,12 +57,22 @@ function Popup (src, opts) {
     }
   }
 
-  // open the window in the center of the screen
+  // we try to place it at the center of the current window
+  // note: this "centering" logic borrowed from the Facebook JavaScript SDK
   if (opts.centered) {
+    var screenX = typeof window.screenX != 'undefined'
+      ? window.screenX : window.screenLeft;
+    var screenY = typeof window.screenY != 'undefined'
+      ? window.screenY : window.screenTop;
+    var outerWidth = typeof window.outerWidth != 'undefined'
+      ? window.outerWidth : document.documentElement.clientWidth;
+    var outerHeight = typeof window.outerHeight != 'undefined'
+      ? window.outerHeight : (document.documentElement.clientHeight - 22); // 22= IE toolbar height
+
     if (null == opts.left)
-      opts.left = (screen.width / 2) - (opts.width / 2);
+      opts.left = parseInt(screenX + ((outerWidth - opts.width) / 2), 10);
     if (null == opts.top)
-      opts.top = (screen.height / 2) - (opts.height / 2);
+      opts.top = parseInt(screenY + ((outerHeight - opts.height) / 2.5), 10);
     delete opts.centered;
   }
 
