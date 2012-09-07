@@ -1,0 +1,12 @@
+{
+  "name": "popup",
+  "repo": "component/popup",
+  "description": "Component to create a native popup window via window.open()",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {}
+  "scripts": [
+    "index.js"
+  ]
+}
