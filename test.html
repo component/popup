@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>popup test</title>
+    <script src="build/build.js"></script>
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <button>open popup</button>
+    <script type="text/javascript">
+      var Popup = require('popup');
+      var button = document.getElementsByTagName('button')[0];
+      button.onclick = function () {
+        var p = new Popup('http://n8.io');
+      };
+    </script>
+  </body>
+</html>
