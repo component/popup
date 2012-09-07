@@ -3,7 +3,8 @@
   "description": "Component to create a native popup window via window.open()",
   "version": "0.0.1",
   "dependencies": {
-    "emitter-component": "*"
+    "emitter-component": "*",
+    "inherit-component": "*"
   },
   "component": {
     "scripts": {

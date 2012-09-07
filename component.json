@@ -4,8 +4,10 @@
   "description": "Component to create a native popup window via window.open()",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
-  "development": {},
+  "dependencies": {
+    "component/emitter": "*",
+    "component/inherit": "*"
+  },
   "scripts": [
     "index.js"
   ]

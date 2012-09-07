@@ -11,7 +11,22 @@
  *     });
  */
 
+/**
+ * Module derencencies.
+ */
+
 var Emitter = require('emitter');
+  , inherit = require('inherit');
+
+/**
+ * Module exports.
+ */
+
+exports = module.exports = Popup;
+
+/**
+ * Default Popup options.
+ */
 
 var defaults = {
     width: 700
@@ -22,8 +37,6 @@ var defaults = {
   , scrollbars: 'no'
   , centered: true
 };
-
-exports = module.exports = Popup;
 
 /**
  * The "Popup" constructor.
@@ -86,7 +99,7 @@ function Popup (src, opts) {
 }
 
 // inherit from Emitter
-Popup.prototype.__proto__ = Emitter.prototype;
+inherit(Popup, Emitter);
 
 /**
  * Closes the popup window.
