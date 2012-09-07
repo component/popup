@@ -15,7 +15,7 @@
  * Module derencencies.
  */
 
-var Emitter = require('emitter');
+var Emitter = require('emitter')
   , inherit = require('inherit');
 
 /**
