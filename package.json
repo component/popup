@@ -1,8 +1,7 @@
 {
   "name": "popup",
-  "description": "Create a browser popup window",
+  "description": "Component to create a native popup window via window.open()",
   "version": "0.0.1",
-  "bundledDependencies": ["core"],
   "dependencies": {
     "emitter-component": "*"
   },
